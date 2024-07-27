@@ -3,8 +3,18 @@ de uma árvore binária e retorne 1 se todo nó não folha tem valor maior que s
 caso contrário.*/
 
 
+
+/*Escreva uma função que receba como parâmetro um ponteiro para a raiz de uma árvore
+binária e retorne a altura da árvore.*/
+
+
+/* Escreva uma função que receba como parâmetro um ponteiro para a raiz de uma árvore
+binária e um valor inteiro g (cujos valores possíveis são 0, 1 ou 2), e retorne o número de nós
+da árvore que têm grau igual a g. (grau = número de subárvores)*/
+
+
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib.h> 
 
 struct no {
     int valor;
@@ -69,7 +79,6 @@ int nomaior(struct no *raiz)    {
             retesc = retdir = 0;
         }
     }
-    // A putaria toda ta aqui
     else if(raiz->fesq) {
         if(raiz->valor > raiz->fesq->valor) retesc = nomaior(raiz->fesq);
         else retesc = 0;
@@ -84,10 +93,81 @@ int nomaior(struct no *raiz)    {
     else return 0;
 }
 
-void main (void) {
+int somafolha(struct no *aux)   {
+    int sum;
+    sum = 0;
+    if(!aux) return 0;
+    if(!aux->fdir && !aux->fesq) return aux->valor;
+    sum += somafolha(aux->fesq);
+    sum += somafolha(aux->fdir);
+    return sum;
+}
+
+
+int graus(struct no *arv, int g)   {
+    if(!arv) return 0;
+    int num = 0;
+    if(!g)  {
+        num += graus(arv->fesq, g);
+        num += graus(arv->fdir, g);
+        if(!arv->fdir && !arv->fesq) {
+            //printf("VALOR = %d\n", arv->valor);
+            num += 1;
+            return num;
+        }
+    }
+    else if(g == 1) {
+        num += graus(arv->fesq, g);
+        num += graus(arv->fdir, g);
+        if((arv->fdir && !arv->fesq) || (arv->fesq && !arv->fdir)){
+            //printf("VALOR = %d\n", arv->valor);
+            num += 1;
+            return num;
+        }
+    }
+    else if(g == 2) {
+        num += graus(arv->fesq, g);
+        num += graus(arv->fdir, g); 
+        if(arv->fdir && arv->fesq)  {
+            //printf("VALOR = %d\n", arv->valor);
+            num += 1;
+            return num;
+        }
+    }
+    return  num;
+}
+
+struct no *menor(struct no *pai)   {
+    struct no *node, *tmp;
+    node = NULL;
+    if(!pai) return NULL;
+    if(!pai->fdir && !pai->fesq) return pai;
+    tmp = menor(pai->fesq);
+    node = (tmp && (pai->valor < tmp->valor)) ? pai : tmp;
+    tmp = menor(pai->fdir);
+    node = ((tmp && node) && (tmp->valor < node->valor)) ? tmp : node;
+    
+    if(node) return node;
+    return tmp;
+}
+
+int altura (struct no *arv) {
+    int result, aux;
+    result = 0;
+    if(!arv) return 0;
+    if(!arv->fdir && !arv->fesq)  return 0;
+    
+    result = 1 + altura(arv->fesq);
+    aux = 1 + altura(arv->fdir);
+
+    if(result > aux) return result;
+    return aux;
+}
+
+int main (void) {
     struct no *arvore = NULL, *aux;
     int ret;
-    int arvCont[] = { -1, 100, 83, 90, 18, 15, 36, 29, -1, -1, 5, 1, -1, -1, -1, 8 };
+    int arvCont[] = { -1, 100, 83, 90, 18, 15, 1, 29, 40, -1, 3, 8, -1, -1, -1, 5 };
     arvore = alocar(1, arvCont, 15);
 
     if(nomaior(arvore)) printf("\nO nós filhos tem valores MENORES que seus pais\n");
@@ -95,4 +175,11 @@ void main (void) {
 
     mostrar(arvore, 0);
 
+    printf("O somatório dos valores dos nos folhas é = %d\n", somafolha(arvore));
+    aux = menor(arvore);
+    
+    if(aux) printf("O valor do menor elemento na arvore é: %d\n", aux->valor);
+    printf("A altura da árvore é: %d\n", altura(arvore));
+    printf("O número de nós com grau %d é: %d\n", 0, graus(arvore, 0));
+    return 0;
 }
