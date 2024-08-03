@@ -1,0 +1,57 @@
+# Alunos cadastrados
+Alunos:
+-	name: Pedro
+	id: 1
+	course: Redes de Computadores
+	tell: 73 991166585
+
+-	name: Angela
+	id: 2
+	course: Ciência da Computação
+	tell: 77 981366585
+
+-	name: Lucas
+	id: 3
+	course: Física
+	tell: 73 8891066585
+
+-	name: Robert
+	id: 4
+	course: Engenharia da Computação
+	tell: 73 1315166585
+
+-	name: Lucifer
+	id: 5
+	course: Química
+	tell: 55 999919626
+
+-	name: Puto
+	id: 6
+	course: Curso de Sexologia
+	tell: 73 988422334
+
+-	name: Lucas
+	id: 7
+	course: Urologia
+	tell: 45 67767676
+
+-	name: Xuxa
+	id: 8
+	course: Putaria
+	tell: 73 88998959
+
+-	name: Figaro
+	id: 9
+	course: Filosofia
+	tell: 85 99495658
+
+-	name: xuxa2
+	id: 10
+	course: filosofia
+	tell: 599955979
+
+-	name: Greene
+	id: 11
+	course: Geografia
+	tell: 75 88998855
+

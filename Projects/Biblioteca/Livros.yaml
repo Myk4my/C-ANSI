@@ -1,0 +1,42 @@
+# Livros cadastrados
+Livros:
+-	name: A arte da guerra
+	autor: Sun tsu
+	cópias: 243
+	ano: 1565
+
+-	name: Assim falou zaratrusra
+	autor: Nithece
+	cópias: 2
+	ano: 1886
+
+-	name: Deus e o Diabo versão 2
+	autor: Pedro Lobeu
+	cópias: 25
+	ano: 1996
+
+-	name: Rapido e devagar
+	autor: Daniel Khaneman
+	cópias: 20
+	ano: 2002
+
+-	name: Por que os espelhos mentem
+	autor: Pedro Lobeu
+	cópias: 13
+	ano: 2023
+
+-	name: A sutil arte de ligar o foda-se
+	autor: Sabio famosio
+	cópias: 12
+	ano: 2002
+
+-	name: Let's fuck asses
+	autor: Yagamy
+	cópias: 2
+	ano: 2003
+
+-	name: gula o pecado
+	autor: judas
+	cópias: 1
+	ano: 1
+

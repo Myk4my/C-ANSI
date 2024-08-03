@@ -1,0 +1,32 @@
+# Alunos cadastrados
+Alunos:
+-	name: Pedro
+	age: 28
+	course: Redes de Computadores
+-	name: Angela
+	age: 19
+	course: Ciência da Computação
+-	name: Lucas
+	age: 41
+	course: Física
+-	name: Robert
+	age: 45
+	course: Engenharia da Computação
+-	name: Delirou
+	age: 19
+	course: Geografia Computacional
+-	name: Fulano
+	age: 45
+	course: Bacharel em quimica
+-	name: Sulivan
+	age: 26
+	course: Engenheiro Químico
+-	name: Lucas
+	age: 25
+	course: Química
+-	name: Paulo
+	age: 56
+	course: Engenharia Aero Espacial
+-	name: Simon
+	age: 26
+	course: Filosofia

@@ -1,0 +1,36 @@
+README
+
+Descrição do Projeto: Sistema de Cadastro de Alunos
+Funcionalidades do programa:
+
+    Adicionar um novo aluno ao sistema, inserindo informações como nome, idade e curso.
+    Listar todos os alunos cadastrados no sistema, exibindo suas informações.
+    Salvar os dados dos alunos em um arquivo para acesso posterior.
+    Carregar os dados dos alunos a partir do arquivo na inicialização do programa.
+
+Passos sugeridos para a implementação:
+
+    Definir uma estrutura (struct) para representar os dados do aluno (nome, idade e curso).
+    Criar funções para realizar as operações de adicionar um aluno, listar os alunos e salvar os dados em arquivo.
+    Implementar a funcionalidade para ler os dados do arquivo e carregar os alunos quando o programa for iniciado.
+    Criar um loop principal do programa que permita ao usuário escolher as diferentes opções do menu.
+
+
+EXMPLO
+Bem-vindo ao Sistema de Cadastro de Alunos!
+
+Escolha uma opção:
+1. Adicionar aluno
+2. Listar alunos
+3. Sair
+
+Opção = 
+
+Observações:
+
+    Certifique-se de usar a biblioteca padrão de manipulação de arquivos em C (stdio.h).
+    Utilize funções para cada operação principal, o que tornará o código mais organizado e modular.
+    Ao salvar os dados em um arquivo, você pode escolher um formato simples, como CSV (Comma-Separated Values) ou um formato personalizado.
+    Ao listar os alunos, considere formatar a saída para que seja legível e organizada.
+
+Este projeto é uma oportunidade para você praticar conceitos intermediários em C ANSI, como a manipulação de arquivos, uso de estruturas e laços de repetição. Sinta-se à vontade para adaptar o projeto conforme sua preferência e adicionar mais funcionalidades se desejar. Boa codificação!

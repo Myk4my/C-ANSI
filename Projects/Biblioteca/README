@@ -1,0 +1,44 @@
+Descrição do Projeto: Sistema de Gerenciamento de Biblioteca
+Funcionalidades do programa:
+
+    Cadastrar um novo livro na biblioteca, inserindo informações como título, autor, ano de publicação e número de cópias disponíveis.
+    Cadastrar um novo usuário do sistema, inserindo informações como nome, número de identificação e telefone.
+    Realizar empréstimos de livros para usuários, verificando a disponibilidade de cópias.
+    Realizar devoluções de livros, atualizando o número de cópias disponíveis.
+    Listar todos os livros disponíveis na biblioteca, exibindo suas informações.
+    Listar todos os usuários cadastrados no sistema, exibindo suas informações.
+    Salvar os dados dos livros e usuários em arquivos para acesso posterior.
+    Carregar os dados dos livros e usuários a partir dos arquivos na inicialização do programa.
+
+Passos sugeridos para a implementação:
+
+    Definir estruturas (structs) para representar os dados de livros e usuários.
+    Criar funções para cada operação principal, como cadastrar livro, cadastrar usuário, realizar empréstimo, realizar devolução, listar livros, listar usuários, salvar dados em arquivo e carregar dados do arquivo.
+    Implementar a funcionalidade para ler os dados dos arquivos e carregar os livros e usuários quando o programa for iniciado.
+    Criar um loop principal do programa que permita ao usuário escolher as diferentes opções do menu.
+
+Exemplo de menu (interface do usuário):
+
+markdown
+
+Bem-vindo ao Sistema de Gerenciamento de Biblioteca!
+
+Escolha uma opção:
+1. Cadastrar livro
+2. Cadastrar usuário
+3. Realizar empréstimo
+4. Realizar devolução
+5. Listar livros disponíveis
+6. Listar usuários cadastrados
+7. Sair
+
+Opção:
+
+Observações:
+
+    Utilize alocação dinâmica de memória para lidar com diferentes quantidades de livros e usuários cadastrados.
+    Ao salvar os dados em arquivos, você pode escolher um formato simples, como CSV (Comma-Separated Values) ou um formato personalizado.
+    Ao listar os livros e usuários, considere formatar a saída para que seja legível e organizada.
+    Implemente validações para evitar erros no programa, como empréstimos inválidos ou livros inexistentes.
+
+Este projeto é de nível avançado em C ANSI e permitirá que você pratique conceitos complexos, como gerenciamento de memória, manipulação de arquivos, uso de estruturas de dados e algoritmos de busca e validação. Sinta-se à vontade para adaptar o projeto conforme sua preferência e adicionar mais funcionalidades se desejar. Boa codificação!
